@@ -1,0 +1,42 @@
+env:
+  browser: true
+  es2021: true
+extends:
+  - "plugin:react/recommended"
+  - "plugin:@typescript-eslint/recommended"
+  - "plugin:import/typescript"
+  - "plugin:@next/next/recommended"
+  - airbnb
+  - prettier
+parser: "@typescript-eslint/parser"
+parserOptions:
+  project: "./tsconfig.json"
+  tsconfigRootDir: "./"
+  ecmaFeatures:
+    jsx: true
+  ecmaVersion: 12
+  sourceType: module
+settings:
+  "import/resolver":
+    - "typescript": {}
+  "import/ignore":
+    - \.coffee$
+    - \.(scss|less|css)$
+plugins:
+  - "@typescript-eslint"
+  - "prettier"
+  - "import"
+  - react
+rules:
+  prettier/prettier:
+    - error
+  "@typescript-eslint/explicit-module-boundary-types":
+    - off
+  "react/jsx-filename-extension":
+    [2, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }]
+  "react/react-in-jsx-scope":
+    - off
+  "react/jsx-props-no-spreading":
+    - off
+  "react/require-default-props":
+    - off

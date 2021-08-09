@@ -1,0 +1,29 @@
+POST http://localhost:4000/habitstacker/page/create HTTP/1.1
+Content-Type: application/json
+
+{
+	"goals": ["HTML", "CSS", "JavaScript", "Node.js", "React"],
+	"stacks": [
+		{
+			"top": 0,
+			"currentHabit": "wake up",
+			"nextHabit": null,
+			"time": "07:00",
+			"location": "home"
+		},
+		{
+			"top": 1,
+			"currentHabit": "wake up",
+			"nextHabit": "brush my teeth",
+			"time": "07:00",
+			"location": "home"
+		},
+		{
+			"top": 2,
+			"currentHabit": "cleaning up",
+			"nextHabit": "have a breakfast",
+			"time": "07:15",
+			"location": "home"
+		}
+	]
+}
